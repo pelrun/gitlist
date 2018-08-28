@@ -24,7 +24,7 @@ class TreeGraphController implements ControllerProviderInterface
                 $graphItems = array();
 
                 foreach ($rawRows as $row) {
-                    if (preg_match("/^(.+?)(\s(B\[(.*?)\])? C\[(.+?)\] D\[(.+?)\] A\[(.+?)\] E\[(.+?)\] H\[(.+?)\] S\[(.+?)\])?$/", $row, $output)) {
+                    if (preg_match("/^(.+?)(\s(B\[(.*?)\])? C\[(.+?)\] D\[(.+?)\] A\[(.+?)\] E\[(.+?)\] H\[(.+?)\] S\[(.*?)\])?$/", $row, $output)) {
                         if (!isset($output[4])) {
                             $graphItems[] = array(
                                 'relation' => $output[1],
